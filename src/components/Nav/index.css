@@ -1,0 +1,10 @@
+ul.nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+ul.nav-list li {
+    margin-right: 32px;
+}

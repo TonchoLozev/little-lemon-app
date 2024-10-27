@@ -6,6 +6,11 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -44,4 +49,89 @@ h1, h2, h3, h4, h5, h6 {
 */
 #root, #__next {
   isolation: isolate;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* vriables */
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+}
+
+/* global styles */
+.nav-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.title-font {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 64px;
+}
+
+.subtitle-font {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40;
+}
+
+.description-font, .cta-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18;
+}
+
+.section-title-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 200;
+  text-transform: uppercase;
+}
+
+.section-category-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 16;
+}
+
+.card.title-font {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18;
+}
+
+.paragraph {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16;
+  line-height: 1.5;
+}
+
+.highlight {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16;
 }

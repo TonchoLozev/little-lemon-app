@@ -1,8 +1,10 @@
+import React from 'react';
+
 import './index.css';
 
 const Nav = () => {
     return (
-        <ul>
+        <ul className='nav-list nav-font'>
             <li>Home</li>
             <li>About</li>
             <li>Menu</li>
