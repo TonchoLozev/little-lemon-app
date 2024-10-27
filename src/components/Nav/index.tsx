@@ -1,16 +1,13 @@
 import React from 'react';
 
+import Constants from '../../constants.ts';
+
 import './index.css';
 
 const Nav = () => {
     return (
         <ul className='nav-list nav-font'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Menu</li>
-            <li>Reservations</li>
-            <li>Order Online</li>
-            <li>Login</li>
+            {Constants.LINKS.NAVIGATION.map(({name, link}) => <li><a href={link}>{name}</a></li>)}
         </ul>
     )
 

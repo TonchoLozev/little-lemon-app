@@ -8,3 +8,7 @@ ul.nav-list {
 ul.nav-list li {
     margin-right: 32px;
 }
+
+ul.nav-list li:last-of-type {
+    margin-right: 0;
+}

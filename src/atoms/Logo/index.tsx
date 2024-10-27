@@ -10,9 +10,9 @@ type LogoProps = {
     className?: string,
 }
 
-const Logo = ({height = 50, width = 50, className = 'logo'}: LogoProps) => {
+const Logo = ({height = 50, width = 50, className}: LogoProps) => {
     return (
-        <img src={logo} height={height} width={width} className={className} alt="Little Lemon Logo"/>
+        <img src={logo} height={height} width={width} className={`logo ${className}`} alt="Little Lemon Logo"/>
     )
 }
 

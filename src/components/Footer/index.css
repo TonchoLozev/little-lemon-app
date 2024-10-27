@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0;
+    background-color: var(--seconary-light-grey);
+}
+
+.footer-image {
+    border-radius: 16px;
+    margin-right: 64px;
+}
+
+.footer-doormat {
+    display: flex;
+}
+
+.doormat-footer {
+    margin-right: 64px;
+}

@@ -1,3 +1,10 @@
+/* vriables */
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --seconary-light-grey: #EDEFEE;
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -55,10 +62,9 @@ ul {
   list-style-type: none;
 }
 
-/* vriables */
-:root {
-  --primary-green: #495E57;
-  --primary-yellow: #F4CE14;
+a, button /* &c... */ {
+  all: unset;
+  cursor: pointer;
 }
 
 /* global styles */
@@ -83,7 +89,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 40;
+  font-size: 40px;
 }
 
 .description-font, .cta-font {
@@ -91,7 +97,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 18;
+  font-size: 18px;
 }
 
 .section-title-font {
@@ -99,7 +105,7 @@ ul {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-size: 200;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -108,30 +114,42 @@ ul {
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-size: 16;
+  font-size: 16px;
 }
 
-.card.title-font {
+.card-title-font {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 18;
+  font-size: 18px;
 }
 
-.paragraph {
+.paragraph-font {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16;
+  font-size: 16px;
   line-height: 1.5;
 }
 
-.highlight {
+.highlight-font {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  font-size: 16;
+  font-size: 16px;
+}
+
+.p-green-font {
+  color: var(--primary-green);
+}
+
+.p-yellow-font {
+  color: var(--primary-yellow);
+}
+
+.s-light-grey-font {
+  color: var(--seconary-light-grey);
 }
