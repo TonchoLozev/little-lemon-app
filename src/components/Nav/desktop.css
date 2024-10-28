@@ -1,0 +1,20 @@
+ul.nav-list-desk {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    ul.nav-list-desk {
+        display: flex;
+    }
+}
+
+ul.nav-list-desk li {
+    margin-right: 32px;
+}
+
+ul.nav-list-desk li:last-of-type {
+    margin-right: 0;
+}

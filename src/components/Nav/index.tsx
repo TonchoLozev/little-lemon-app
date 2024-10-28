@@ -1,18 +1,14 @@
 import React from 'react';
 
-import Constants from '../../constants.ts';
-
-import './index.css';
+import NavDesktop from './desktop.tsx';
+import NavMobile from './mobile.tsx';
 
 const Nav = () => {
     return (
-        <ul className="nav-list nav-font">
-            {Constants.LINKS.NAVIGATION.map(({ name, link }, index) => (
-                <li key={index}>
-                    <a href={link}>{name}</a>
-                </li>
-            ))}
-        </ul>
+        <>
+            <NavDesktop />
+            <NavMobile />
+        </>
     );
 };
 

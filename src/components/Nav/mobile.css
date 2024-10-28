@@ -1,0 +1,36 @@
+.nav-mob {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.nav-list-mob {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 0;
+    height: 0;
+}
+
+ul.nav-list-mob--opened {
+    transition: width 400ms ease-in-out;
+    width: 80%;
+    height: 100%;
+}
+
+ul.nav-list-mob li {
+    margin-right: 32px;
+}
+
+ul.nav-list-mob li:last-of-type {
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .nav-mob {
+        display: none;
+    }
+}
