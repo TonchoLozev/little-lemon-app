@@ -15,7 +15,7 @@ const NavMobile = () => {
         if (isListShown) {
             setIsListShown((prevState) => !prevState);
         } else {
-            setTimeout(() => setIsListShown((prevState) => !prevState), 300);
+            setTimeout(() => setIsListShown((prevState) => !prevState), 350);
         }
     };
 

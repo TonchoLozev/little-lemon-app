@@ -9,6 +9,7 @@ ul.nav-list-mob {
     background: white;
     flex-direction: row;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 0;
