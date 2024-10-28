@@ -1,0 +1,80 @@
+.nav-font {
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+}
+
+@media (min-width: 1025px) {
+    .nav-font {
+        font-size: 20px;
+    }
+}
+
+.title-font {
+    font-family: 'Markazi Text', serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 64px;
+}
+
+.subtitle-font {
+    font-family: 'Markazi Text', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.description-font,
+.cta-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.section-title-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.section-category-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.card-title-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.paragraph-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.highlight-font {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}

@@ -8,10 +8,10 @@ import './index.css';
 const Header = () => {
     return (
         <header>
-            <Logo width={150} className='header-logo'/>
-            <Nav/>
+            <Logo className="header-logo" />
+            <Nav />
         </header>
-    )
-}
+    );
+};
 
 export default Header;

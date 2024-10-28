@@ -3,58 +3,58 @@ const Constants = {
         NAVIGATION: [
             {
                 name: 'Home',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'About',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Menu',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Reservations',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Online Reservation',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Login',
-                link: '/'
+                link: '/',
             },
         ],
         CONTACT: [
             {
                 name: 'Address',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Phone Number',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Email',
-                link: '/'
+                link: '/',
             },
         ],
         SOCIAL_MEDIA: [
             {
                 name: 'Instagram',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Facebook',
-                link: '/'
+                link: '/',
             },
             {
                 name: 'Twitter',
-                link: '/'
+                link: '/',
             },
-        ]
-    }
-}
+        ],
+    },
+};
 
 export default Constants;

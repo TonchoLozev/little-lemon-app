@@ -8,4 +8,11 @@ header {
 
 .header-logo {
     margin-right: 64px;
+    width: 100px;
+}
+
+@media (min-width: 1025px) {
+    .header-logo {
+        width: 150px;
+    }
 }
