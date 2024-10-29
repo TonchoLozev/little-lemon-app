@@ -9,3 +9,7 @@
 .text-light-gray {
     color: var(--seconary-light-gray);
 }
+
+img {
+    border-radius: 16px;
+}

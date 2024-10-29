@@ -3,12 +3,11 @@ footer {
     flex: 1;
     flex-wrap: wrap;
     padding: 64px 0;
-    background-color: var(--seconary-light-grey);
+    background-color: var(--seconary-light-gray);
     padding: 16px;
 }
 
 .footer-image {
-    border-radius: 16px;
     margin-right: 64px;
     margin-bottom: 32px;
 }
