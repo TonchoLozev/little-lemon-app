@@ -1,21 +1,26 @@
 footer {
     display: flex;
     flex: 1;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
     padding: 64px 0;
     background-color: var(--seconary-light-grey);
+    padding: 16px;
 }
 
 .footer-image {
     border-radius: 16px;
     margin-right: 64px;
-}
-
-.footer-doormat {
-    display: flex;
+    margin-bottom: 32px;
 }
 
 .doormat-footer {
-    margin-right: 64px;
+    margin-right: 32px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 1025px) {
+    footer {
+        padding: 32px;
+        justify-content: center;
+    }
 }

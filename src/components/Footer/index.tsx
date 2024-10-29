@@ -17,23 +17,21 @@ const Footer = () => {
                 height={270}
                 className="footer-image"
             />
-            <div className="footer-doormat">
-                <DoormatNavigation
-                    className="doormat-footer"
-                    title="Doormat Navigation"
-                    links={Constants.LINKS.NAVIGATION}
-                />
-                <DoormatNavigation
-                    className="doormat-footer"
-                    title="Contact"
-                    links={Constants.LINKS.CONTACT}
-                />
-                <DoormatNavigation
-                    className="doormat-footer"
-                    title="Social Media Links"
-                    links={Constants.LINKS.SOCIAL_MEDIA}
-                />
-            </div>
+            <DoormatNavigation
+                className="doormat-footer"
+                title="Doormat Navigation"
+                links={Constants.LINKS.NAVIGATION}
+            />
+            <DoormatNavigation
+                className="doormat-footer"
+                title="Contact"
+                links={Constants.LINKS.CONTACT}
+            />
+            <DoormatNavigation
+                className="doormat-footer"
+                title="Social Media Links"
+                links={Constants.LINKS.SOCIAL_MEDIA}
+            />
         </footer>
     );
 };
