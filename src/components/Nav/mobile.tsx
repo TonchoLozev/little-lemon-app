@@ -32,7 +32,7 @@ const NavMobile = () => {
                 />
             </div>
             <ul
-                className={`nav-list-mob ${isMenuOpened ? 'nav-list-mob--opened' : ''} nav-font`}
+                className={`nav-list-mob ${isMenuOpened ? 'nav-list-mob--opened' : ''}`}
             >
                 {isListShown &&
                     Constants.LINKS.NAVIGATION.map(({ name, link }, index) => (

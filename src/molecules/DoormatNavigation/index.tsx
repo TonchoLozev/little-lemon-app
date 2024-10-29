@@ -17,9 +17,7 @@ const DoormatNavigation = ({
 }: DoormatNavigationProps) => {
     return (
         <div className={`doormat-navigation ${className}`}>
-            <h5 className="doormat-title card-title-font p-green-font">
-                {title}
-            </h5>
+            <h6 className="doormat-title text-green">{title}</h6>
             <ul>
                 {links.map(({ name, link }, index) => (
                     <li key={index} className="doormat-link">

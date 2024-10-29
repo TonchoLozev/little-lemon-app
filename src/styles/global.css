@@ -1,11 +1,11 @@
-.p-green-font {
+.text-green {
     color: var(--primary-green);
 }
 
-.p-yellow-font {
+.text-yellow {
     color: var(--primary-yellow);
 }
 
-.s-light-grey-font {
-    color: var(--seconary-light-grey);
+.text-light-gray {
+    color: var(--seconary-light-gray);
 }

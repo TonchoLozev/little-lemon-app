@@ -10,13 +10,10 @@ type LinksProps = {
 const Link = ({ className, name, link }: LinksProps) => {
     return (
         <>
-            <a
-                className={`link highlight-font p-green-font ${className}`}
-                href={link}
-            >
-                {name}
+            <a className={`link text-green  ${className}`} href={link}>
+                <span>{name}</span>
             </a>
-            <hr className="p-green-font" />
+            <hr className="text-green " />
         </>
     );
 };

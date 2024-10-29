@@ -6,7 +6,7 @@ import './desktop.css';
 
 const NavDesktop = () => {
     return (
-        <ul className="nav-list-desk nav-font">
+        <ul className="nav-list-desk">
             {Constants.LINKS.NAVIGATION.map(({ name, link }, index) => (
                 <li key={index}>
                     <a href={link}>{name}</a>

@@ -5,10 +5,10 @@ import NavMobile from './mobile.tsx';
 
 const Nav = () => {
     return (
-        <>
+        <nav>
             <NavDesktop />
             <NavMobile />
-        </>
+        </nav>
     );
 };
 
