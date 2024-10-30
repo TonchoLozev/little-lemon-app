@@ -2,6 +2,7 @@ footer {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding: 64px 0;
     background-color: var(--seconary-light-gray);
     padding: 16px;
