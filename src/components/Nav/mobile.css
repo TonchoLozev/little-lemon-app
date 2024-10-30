@@ -24,6 +24,10 @@ ul.nav-list-mob--opened {
     margin-top: 8px;
 }
 
+ul.nav-list-mob li:hover {
+    opacity: 0.5;
+}
+
 @media (min-width: 768px) {
     .nav-mob {
         display: none;

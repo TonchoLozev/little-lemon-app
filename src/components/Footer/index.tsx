@@ -10,7 +10,7 @@ import './index.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="background-light-gray">
             <img
                 src={Restaurant}
                 width={170}

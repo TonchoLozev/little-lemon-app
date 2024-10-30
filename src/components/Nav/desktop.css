@@ -15,6 +15,10 @@ ul.nav-list-desk li {
     margin-right: 32px;
 }
 
+ul.nav-list-desk li:hover {
+    opacity: 0.5;
+}
+
 ul.nav-list-desk li:last-of-type {
     margin-right: 0;
 }

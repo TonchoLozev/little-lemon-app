@@ -7,7 +7,7 @@ import './index.css';
 
 const Header = () => {
     return (
-        <header>
+        <header className="grid-layout">
             <div className="header-grid">
                 <Logo className="header-logo" />
                 <Nav />

@@ -1,10 +1,3 @@
-header {
-    display: grid;
-    grid-template-columns: var(--grid);
-    gap: 20px;
-    margin: 16px;
-}
-
 .header-grid {
     grid-column: col-start 1 / span 4;
     display: flex;
@@ -20,11 +13,6 @@ header {
 }
 
 @media (min-width: 1025px) {
-    header {
-        margin: 0 40px;
-        padding: 32px 0;
-    }
-
     .header-grid {
         grid-column: col-start 2 / span 10;
     }
