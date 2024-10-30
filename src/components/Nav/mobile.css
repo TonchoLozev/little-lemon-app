@@ -7,6 +7,7 @@
 .icon-hamburger-menu--opened {
     margin-top: 15px;
 }
+
 ul.nav-list-mob {
     background: white;
     flex-direction: column;
@@ -21,12 +22,6 @@ ul.nav-list-mob--opened {
     width: 80%;
     height: 150px;
     margin-top: 8px;
-}
-
-ul.nav-list-mob li {
-}
-
-ul.nav-list-mob li:last-of-type {
 }
 
 @media (min-width: 768px) {
