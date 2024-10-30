@@ -3,6 +3,15 @@
     --primary-green: #495e57;
     --primary-yellow: #f4ce14;
     --seconary-light-gray: #edefee;
+
+    --grid: repeat(4, [col-start] 1fr);
+
     --tablet-breakpoint: 768px;
     --desktop-breakpoint: 1025px;
+}
+
+@media (min-width: 1025px) {
+    :root {
+        --grid: repeat(12, [col-start] 1fr);
+    }
 }
