@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Button from '../../molecules/Button/index.tsx';
-
-import Restauranfood from '../../assets/other/restauranfood.jpg';
+import Button from '../../atoms/Button/index.tsx';
 
 import './index.css';
 
@@ -23,7 +21,7 @@ const HeroSection = () => {
                 <Button onClick={handleReserve}>Reserve Table</Button>
             </div>
             <img
-                src={Restauranfood}
+                src="./assets/other/restauranfood.jpg"
                 width={339}
                 height={417}
                 className="hero-section-image"

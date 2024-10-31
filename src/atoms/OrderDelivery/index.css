@@ -1,0 +1,13 @@
+.order-delivery-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-delivery-btn:hover {
+    color: var(--primary-green);
+}
+
+.order-delivery-btn span {
+    margin-right: 8px;
+}

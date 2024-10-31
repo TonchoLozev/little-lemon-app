@@ -1,7 +1,7 @@
-.doormat-title {
+.doormat-navigation h6 {
     margin-bottom: 16px;
 }
 
-.doormat-link {
+.doormat-navigation li {
     margin-bottom: 8px;
 }

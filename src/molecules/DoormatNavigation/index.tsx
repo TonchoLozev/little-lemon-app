@@ -5,22 +5,17 @@ import Link from '../../atoms/Link/index.tsx';
 import './index.css';
 
 type DoormatNavigationProps = {
-    className?: string;
     title: string;
     links: { name: string; link: string }[];
 };
 
-const DoormatNavigation = ({
-    className,
-    title,
-    links,
-}: DoormatNavigationProps) => {
+const DoormatNavigation = ({ title, links }: DoormatNavigationProps) => {
     return (
-        <div className={`doormat-navigation ${className}`}>
-            <h6 className="doormat-title text-green">{title}</h6>
+        <div className="doormat-navigation">
+            <h6 className="text-green">{title}</h6>
             <ul>
                 {links.map(({ name, link }, index) => (
-                    <li key={index} className="doormat-link">
+                    <li key={index}>
                         <Link name={name} link={link} />
                     </li>
                 ))}

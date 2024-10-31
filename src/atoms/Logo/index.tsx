@@ -1,22 +1,19 @@
 import React from 'react';
 
-import logo from '../../assets/logos/logo.svg';
-
 import './index.css';
 
 type LogoProps = {
     height?: number;
     width?: number;
-    className?: string;
 };
 
-const Logo = ({ height = 50, width = 50, className }: LogoProps) => {
+const Logo = ({ height = 50, width = 50 }: LogoProps) => {
     return (
         <img
-            src={logo}
+            src="./assets/logos/logo.svg"
             height={height}
             width={width}
-            className={`logo ${className}`}
+            className="logo"
             alt="Little Lemon Logo"
         />
     );

@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="grid-layout">
             <div className="header-grid">
-                <Logo className="header-logo" />
+                <Logo />
                 <Nav />
             </div>
         </header>

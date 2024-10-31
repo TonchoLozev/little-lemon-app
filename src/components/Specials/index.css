@@ -1,0 +1,32 @@
+.specials-title {
+    grid-column: col-start 1 / span 4;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.specials-details {
+    grid-column: col-start 1 / span 4;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.specials-section .card {
+    margin-bottom: 32px;
+}
+
+@media (min-width: 1025px) {
+    .specials-title {
+        grid-column: col-start 2 / span 10;
+        margin-bottom: 48px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .specials-details {
+        grid-column: col-start 2 / span 10;
+        display: flex;
+    }
+}
