@@ -9,7 +9,7 @@
 .specials-details {
     grid-column: col-start 1 / span 4;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 

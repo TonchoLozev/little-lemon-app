@@ -24,7 +24,6 @@ const HeroSection = () => {
                 src="./assets/other/restauranfood.jpg"
                 width={339}
                 height={417}
-                className="hero-section-image"
             />
         </section>
     );

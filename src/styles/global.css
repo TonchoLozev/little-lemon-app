@@ -47,6 +47,6 @@ img {
 
 @media (min-width: 1025px) {
     .grid-layout {
-        padding: 32px 40px;
+        padding: 80px 40px;
     }
 }

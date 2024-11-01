@@ -13,8 +13,9 @@
 
 .testimonials-cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .testimonials-section .card-profile {

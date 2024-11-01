@@ -2,9 +2,10 @@ import React from 'react';
 
 import HeroSection from '../HeroSection/index.tsx';
 import Specials from '../Specials/index.tsx';
+import Testimonials from '../Testimonials/index.tsx';
+import About from '../About/index.tsx';
 
 import './index.css';
-import Testimonials from '../Testimonials/index.tsx';
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
             <HeroSection />
             <Specials />
             <Testimonials />
+            <About />
         </main>
     );
 };
