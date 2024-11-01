@@ -4,17 +4,18 @@ import { OrderDelivery } from '../../atoms/index.ts';
 
 import './index.css';
 
-type CardProps = {
+type CardSpecialProps = {
     image: string;
     title: string;
-    amount: string;
+    amount: number;
     description: string;
 };
-const Card = ({ image, title, amount, description }: CardProps) => {
+
+const Card = ({ image, title, amount, description }: CardSpecialProps) => {
     return (
-        <article className="card">
+        <article className="card-special">
             <img width={280} height={180} src={`./assets/other/${image}`} />
-            <div className="card-details background-light-gray">
+            <div className="card-special-details background-light-gray">
                 <div>
                     <h6>{title}</h6>
                     <span className="text-orange">{amount}$</span>

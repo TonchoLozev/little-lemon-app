@@ -1,25 +1,25 @@
-.card {
+.card-special {
     width: 280px;
     box-shadow: 0px 20px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
+.card-special img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.card-details {
+.card-special-details {
     padding: 12px;
 }
 
-.card-details div {
+.card-special-details div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
 }
 
-.card-details p {
+.card-special-details p {
     width: 70%;
     margin-bottom: 8px;
 }

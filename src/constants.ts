@@ -59,23 +59,34 @@ const Constants = {
         {
             image: 'bruschetta.webp',
             title: 'Greek salad',
-            amount: '12.99',
+            amount: 12.99,
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. ',
         },
         {
             image: 'greek-salad.jpg',
             title: 'Bruscheta',
-            amount: '6.99',
+            amount: 6.99,
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. ',
         },
         {
             image: 'lemon-dessert.jpg',
             title: 'Lemon desert',
-            amount: '5',
+            amount: 5,
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua. ',
+        },
+    ],
+    PROFILES: [
+        { image: 'ivan.jpg', rating: 5, name: 'Ivan', description: 'Amazing' },
+        { image: 'tony.jpg', rating: 4, name: 'Tony', description: 'Great' },
+        { image: 'jhon.jpg', rating: 5, name: 'Jhon', description: 'Amazing' },
+        {
+            image: 'abigail.jpg',
+            rating: 4,
+            name: 'Abigail',
+            description: 'Normal',
         },
     ],
 };

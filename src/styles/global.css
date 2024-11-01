@@ -18,6 +18,10 @@
     color: var(--seconary-light-gray);
 }
 
+.background-white {
+    background-color: white;
+}
+
 .background-green {
     background-color: var(--primary-green);
 }

@@ -1,0 +1,25 @@
+.card-profile {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 210px;
+    border-radius: 12px;
+}
+
+.card-profile h4 {
+    margin-bottom: 8px;
+}
+
+.card-profile div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.card-profile div img {
+    margin-right: 24px;
+    border-radius: 25px;
+}
+
+.card-profile h5 {
+}
