@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../atoms/Button/index.tsx';
+import { Button, SectionBackground } from '../../atoms/index.ts';
 
 import './index.css';
 
@@ -10,7 +10,7 @@ const HeroSection = () => {
     };
     return (
         <section className="hero-section grid-layout">
-            <div className="hero-section-background background-green" />
+            <SectionBackground color="green" />
             <div className="hero-section-description">
                 <h1 className="text-yellow">Little Lemon</h1>
                 <h2 className="text-white">Chicago</h2>

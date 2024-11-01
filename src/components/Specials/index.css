@@ -9,12 +9,12 @@
 .specials-details {
     grid-column: col-start 1 / span 4;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .specials-section .card {
-    margin-bottom: 32px;
+    margin: 16px;
 }
 
 @media (min-width: 1025px) {
@@ -23,6 +23,7 @@
         margin-bottom: 48px;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row;
     }
 
     .specials-details {

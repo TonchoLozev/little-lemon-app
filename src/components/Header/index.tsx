@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Logo from '../../atoms/Logo/index.tsx';
 import Nav from '../Nav/index.tsx';
+
+import { Logo } from '../../atoms/index.ts';
 
 import './index.css';
 

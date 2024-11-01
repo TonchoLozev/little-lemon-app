@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Button from '../../atoms/Button/index.tsx';
-import Card from '../../molecules/Card/index.tsx';
+import { CardSpecial } from '../../molecules/index.ts';
+
+import { Button } from '../../atoms/index.ts';
 
 import Constants from '../../constants.ts';
 
@@ -19,7 +20,7 @@ const Specials = () => {
             </div>
             <div className="specials-details">
                 {Constants.SPECIALS.map((special, index) => (
-                    <Card key={index} {...special} />
+                    <CardSpecial key={index} {...special} />
                 ))}
             </div>
         </section>

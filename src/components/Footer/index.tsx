@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DoormatNavigation from '../../molecules/DoormatNavigation/index.tsx';
+import { DoormatNavigation } from '../../molecules/index.ts';
 
 import Constants from '../../constants.ts';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Link from '../../atoms/Link/index.tsx';
+import { Link } from '../../atoms/index.ts';
 
 import './index.css';
 

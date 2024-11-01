@@ -1,6 +1,6 @@
 import React from 'react';
 
-import OrderDelivery from '../../atoms/OrderDelivery/index.tsx';
+import { OrderDelivery } from '../../atoms/index.ts';
 
 import './index.css';
 
