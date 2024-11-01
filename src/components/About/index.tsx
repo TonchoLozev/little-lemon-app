@@ -4,7 +4,7 @@ import './index.css';
 
 const About = () => {
     return (
-        <section className="about-section grid-layout">
+        <section id="about" className="about-section grid-layout">
             <div className="about-section-description">
                 <h1>Little Lemon</h1>
                 <h2>Chicago</h2>

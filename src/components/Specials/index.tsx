@@ -13,7 +13,7 @@ const Specials = () => {
         return true;
     };
     return (
-        <section className="specials-section grid-layout">
+        <section id="specials" className="specials-section grid-layout">
             <div className="specials-title">
                 <h1>This week specials!</h1>
                 <Button onClick={handleOnlineMenu}>Online Menu</Button>

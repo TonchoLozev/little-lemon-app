@@ -7,18 +7,18 @@ const Constants = {
             },
             {
                 name: 'About',
-                link: '/',
+                link: '#about',
             },
             {
                 name: 'Menu',
-                link: '/',
+                link: '#specials',
             },
             {
                 name: 'Reservations',
                 link: '/',
             },
             {
-                name: 'Online Reservation',
+                name: 'Order Online',
                 link: '/',
             },
             {
