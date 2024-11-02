@@ -1,14 +1,35 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.tsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
+import HomeRoute from './components/HomeRoute/index.tsx';
+import AboutRoute from './components/AboutRoute/index.tsx';
+import MenuRoute from './components/MenuRoute/index.tsx';
+
+import './index.css';
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <HomeRoute />,
+    },
+    {
+        path: '/about',
+        element: <AboutRoute />,
+    },
+    {
+        path: '/menu',
+        element: <MenuRoute />,
+    },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
     <React.StrictMode>
-        <App />
+        <RouterProvider router={router} />
     </React.StrictMode>,
 );
 

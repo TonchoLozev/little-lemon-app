@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Link } from '../../atoms/index.ts';
+import { FooterLink } from '../../atoms/index.ts';
 
 import './index.css';
 
@@ -16,7 +16,7 @@ const DoormatNavigation = ({ title, links }: DoormatNavigationProps) => {
             <ul>
                 {links.map(({ name, link }, index) => (
                     <li key={index}>
-                        <Link name={name} link={link} />
+                        <FooterLink name={name} link={link} />
                     </li>
                 ))}
             </ul>

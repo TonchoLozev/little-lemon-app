@@ -7,11 +7,11 @@ const Constants = {
             },
             {
                 name: 'About',
-                link: '#about',
+                link: '/about',
             },
             {
                 name: 'Menu',
-                link: '#specials',
+                link: '/menu',
             },
             {
                 name: 'Reservations',

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Nav from '../Nav/index.tsx';
 
@@ -10,7 +11,9 @@ const Header = () => {
     return (
         <header className="grid-layout">
             <div className="header-grid">
-                <Logo />
+                <Link to="/">
+                    <Logo />
+                </Link>
                 <Nav />
             </div>
         </header>

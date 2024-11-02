@@ -7,6 +7,7 @@ type ButtonProps = {
     onClick: () => void;
     children: string;
 };
+
 const Button = ({ type = 'primary', onClick, children }: ButtonProps) => {
     const typeClass = useMemo(() => {
         if (type === 'primary') {

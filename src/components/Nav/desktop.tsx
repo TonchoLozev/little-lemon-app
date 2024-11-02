@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Constants from '../../constants.ts';
 
@@ -9,7 +10,8 @@ const NavDesktop = () => {
         <ul className="nav-list-desk">
             {Constants.LINKS.NAVIGATION.map(({ name, link }, index) => (
                 <li key={index}>
-                    <a href={link}>{name}</a>
+                    <Link to={link}>{name}</Link>
+                    {/* <a href={link}>{name}</a> */}
                 </li>
             ))}
         </ul>
