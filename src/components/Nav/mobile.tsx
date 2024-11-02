@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import Constants from '../../constants.ts';
 
+import IconGamburgerMenuImg from '../../assets/icons/icon_hamburger_menu.svg';
+
 import './mobile.css';
 
 const NavMobile = () => {
@@ -15,7 +17,7 @@ const NavMobile = () => {
         <>
             <div className="nav-mob">
                 <img
-                    src="./assets/icons/icon_hamburger_menu.svg"
+                    src={IconGamburgerMenuImg}
                     height={20}
                     width={20}
                     className={`icon-hamburger-menu ${isMenuOpened ? 'icon-hamburger-menu--opened' : ''}`}

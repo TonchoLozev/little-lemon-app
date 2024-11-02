@@ -1,5 +1,8 @@
 import React from 'react';
 
+import MarioAndAdrianAImg from '../../assets/other/mario-and-adrian-a.png';
+import MarioAndAdrianBImg from '../../assets/other/mario-and-adrian-b.png';
+
 import './index.css';
 
 const About = () => {
@@ -23,16 +26,8 @@ const About = () => {
                 </h3>
             </div>
             <div className="about-section-images">
-                <img
-                    src="./assets/other/mario-and-adrian-a.png"
-                    width={270}
-                    height={380}
-                />
-                <img
-                    src="./assets/other/mario-and-adrian-b.png"
-                    width={270}
-                    height={380}
-                />
+                <img src={MarioAndAdrianAImg} width={270} height={380} />
+                <img src={MarioAndAdrianBImg} width={270} height={380} />
             </div>
         </section>
     );

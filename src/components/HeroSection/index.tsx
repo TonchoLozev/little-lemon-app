@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Button, SectionBackground } from '../../atoms/index.ts';
 
+import RestauranfoodImf from '../../assets/other/restauranfood.jpg';
+
 import './index.css';
 
 const HeroSection = () => {
@@ -20,11 +22,7 @@ const HeroSection = () => {
                 </h3>
                 <Button onClick={handleReserve}>Reserve Table</Button>
             </div>
-            <img
-                src="./assets/other/restauranfood.jpg"
-                width={339}
-                height={417}
-            />
+            <img src={RestauranfoodImf} width={339} height={417} />
         </section>
     );
 };

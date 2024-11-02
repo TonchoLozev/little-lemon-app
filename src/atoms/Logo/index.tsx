@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LogoImg from '../../assets/logos/logo.svg';
+
 import './index.css';
 
 type LogoProps = {
@@ -10,7 +12,7 @@ type LogoProps = {
 const Logo = ({ height = 50, width = 50 }: LogoProps) => {
     return (
         <img
-            src="./assets/logos/logo.svg"
+            src={LogoImg}
             height={height}
             width={width}
             className="logo"

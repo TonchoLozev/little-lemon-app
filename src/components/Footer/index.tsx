@@ -4,12 +4,14 @@ import { DoormatNavigation } from '../../molecules/index.ts';
 
 import Constants from '../../constants.ts';
 
+import RestaurantImg from '../../assets/other/restaurant.jpg';
+
 import './index.css';
 
 const Footer = () => {
     return (
         <footer className="background-light-gray">
-            <img src="./assets/other/restaurant.jpg" width={170} height={270} />
+            <img src={RestaurantImg} width={170} height={270} />
             <DoormatNavigation
                 title="Doormat Navigation"
                 links={Constants.LINKS.NAVIGATION}
