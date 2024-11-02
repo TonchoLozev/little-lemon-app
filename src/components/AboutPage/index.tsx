@@ -4,7 +4,7 @@ import Header from '../Header/index.tsx';
 import About from '../About/index.tsx';
 import Footer from '../Footer/index.tsx';
 
-const AboutRoute = () => {
+const AboutPage = () => {
     return (
         <>
             <Header />
@@ -14,4 +14,4 @@ const AboutRoute = () => {
     );
 };
 
-export default AboutRoute;
+export default AboutPage;

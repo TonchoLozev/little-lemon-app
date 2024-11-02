@@ -1,17 +1,16 @@
 import React from 'react';
-
 import Header from '../Header/index.tsx';
-import Specials from '../Specials/index.tsx';
+import Main from '../Main/index.tsx';
 import Footer from '../Footer/index.tsx';
 
-const MenuRoute = () => {
+function HomePage() {
     return (
         <>
             <Header />
-            <Specials />
+            <Main />
             <Footer />
         </>
     );
-};
+}
 
-export default MenuRoute;
+export default HomePage;

@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
-import HomeRoute from './components/HomeRoute/index.tsx';
-import AboutRoute from './components/AboutRoute/index.tsx';
-import MenuRoute from './components/MenuRoute/index.tsx';
+import HomeRoute from './components/HomePage/index.tsx';
+import AboutRoute from './components/AboutPage/index.tsx';
+import MenuRoute from './components/MenuPage/index.tsx';
 
 import './index.css';
 
