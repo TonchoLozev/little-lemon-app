@@ -1,15 +1,14 @@
 import React from 'react';
-import Header from '../Header/index.tsx';
+
+import Page from '../Page/index.tsx';
+
 import Main from '../Main/index.tsx';
-import Footer from '../Footer/index.tsx';
 
 function HomePage() {
     return (
-        <>
-            <Header />
+        <Page>
             <Main />
-            <Footer />
-        </>
+        </Page>
     );
 }
 

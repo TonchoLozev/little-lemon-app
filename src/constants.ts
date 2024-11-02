@@ -15,7 +15,7 @@ const Constants = {
             },
             {
                 name: 'Reservations',
-                link: '/',
+                link: '/booking',
             },
             {
                 name: 'Order Online',
