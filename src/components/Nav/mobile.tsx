@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import Constants from '../../constants.ts';
+import React, { ReactElement, useState } from 'react';
 
 import IconGamburgerMenuImg from '../../assets/icons/icon_hamburger_menu.svg';
 
 import './mobile.css';
 
-const NavMobile = () => {
+type NavMobileProps = {
+    children: ReactElement;
+};
+
+const NavMobile = ({ children }: NavMobileProps) => {
     const [isMenuOpened, setIsMenuOpened] = useState(false);
 
     const handleClick = () => {
@@ -28,15 +29,7 @@ const NavMobile = () => {
                 <ul
                     className={`nav-list-mob ${isMenuOpened ? 'nav-list-mob--opened' : ''}`}
                 >
-                    {isMenuOpened &&
-                        Constants.LINKS.NAVIGATION.map(
-                            ({ name, link }, index) => (
-                                <li key={index}>
-                                    <Link to={link}>{name}</Link>
-                                    {/* <a href={link}>{name}</a> */}
-                                </li>
-                            ),
-                        )}
+                    {isMenuOpened && children}
                 </ul>
             </div>
         </>
