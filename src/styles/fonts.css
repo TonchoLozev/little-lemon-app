@@ -72,6 +72,14 @@ nav {
     font-size: 14px;
 }
 
+input {
+    font-family: 'Karla', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+}
+
 @media (min-width: 1025px) {
     h1 {
         font-size: 64px;
@@ -102,6 +110,10 @@ nav {
     }
 
     span {
+        font-size: 16px;
+    }
+
+    input {
         font-size: 16px;
     }
 

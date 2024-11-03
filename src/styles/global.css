@@ -18,6 +18,10 @@
     color: var(--seconary-light-gray);
 }
 
+.text-red {
+    color: var(--primary-red);
+}
+
 .background-white {
     background-color: white;
 }

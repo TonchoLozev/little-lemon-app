@@ -3,20 +3,21 @@ import React, { useMemo } from 'react';
 import './index.css';
 
 type ButtonProps = {
-    type?: 'primary' | 'secondary';
+    color?: 'primary' | 'secondary';
     onClick: () => void;
     children: string;
 };
 
-const Button = ({ type = 'primary', onClick, children }: ButtonProps) => {
-    const typeClass = useMemo(() => {
-        if (type === 'primary') {
+const Button = ({ color = 'primary', onClick, children }: ButtonProps) => {
+    const colorlass = useMemo(() => {
+        if (color === 'primary') {
             return 'btn-primary';
         }
-        if (type === 'secondary') {
+        ``;
+        if (color === 'secondary') {
             return 'btn-secondary';
         }
-    }, [type]);
+    }, [color]);
 
     const handleOnClick = (event) => {
         event.preventDefault();
@@ -24,7 +25,7 @@ const Button = ({ type = 'primary', onClick, children }: ButtonProps) => {
         onClick();
     };
     return (
-        <button className={`btn ${typeClass}`} onClick={handleOnClick}>
+        <button className={`btn ${colorlass}`} onClick={handleOnClick}>
             <h6>{children}</h6>
         </button>
     );
