@@ -2,69 +2,44 @@
     position: relative;
 }
 
-.booking-section-1 h2 {
-    margin-bottom: 20px;
-}
-
-.booking-reservation-details {
-    grid-column: col-start 1 / span 4;
-    z-index: 1;
-}
-
-.booking-reservation-details form {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.booking-reservation-details form .input {
-    margin: 6px;
-    flex-basis: 100%;
-}
-
-@media (min-width: 768px) {
-    .booking-reservation-details form .input {
-        flex-basis: calc(50% - 16px);
-        margin: 8px;
-    }
-}
-
-@media (min-width: 1025px) {
-    .booking-reservation-details {
-        grid-column: col-start 2 / span 10;
-    }
-}
-
-.booking-section-2 {
-}
-
+.booking-section-1 h2,
 .booking-section-2 h2 {
     margin-bottom: 20px;
 }
 
+.booking-reservation-details,
 .booking-personal-details {
     grid-column: col-start 1 / span 4;
+    z-index: 1;
 }
 
+.booking-reservation-details form,
 .booking-personal-details form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 12px;
 }
 
+.booking-reservation-details form .input,
 .booking-personal-details form .input {
-    margin: 6px;
     flex-basis: 100%;
 }
 
 @media (min-width: 768px) {
+    .booking-reservation-details form,
+    .booking-personal-details form {
+        gap: 24px;
+    }
+
+    .booking-reservation-details form .input,
     .booking-personal-details form .input {
         flex-basis: calc(50% - 16px);
-        margin: 8px;
     }
 }
 
 @media (min-width: 1025px) {
+    .booking-reservation-details,
     .booking-personal-details {
         grid-column: col-start 2 / span 10;
     }

@@ -8,7 +8,7 @@ type InputProps = {
     name: string;
     type: string;
     label: string;
-    value: string;
+    value: string | number;
     onChange: any;
     onBlur: any;
     error: string | false | undefined;

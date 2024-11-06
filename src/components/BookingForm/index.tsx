@@ -4,45 +4,68 @@ import * as Yup from 'yup';
 
 import { Input, SectionBackground } from '../../atoms/index.ts';
 
+import { isTimeBetween } from '../../utils/index.ts';
+
 import './index.css';
 
 const BookingForm = () => {
     const formikReservationDetails = useFormik({
         initialValues: {
-            firstName: '',
-            lastName: '',
-            email: '',
+            date: '',
+            time: '',
+            adults: 1,
+            children: 0,
         },
         validationSchema: Yup.object({
-            firstName: Yup.string()
-                .max(15, 'Must be 15 characters or less')
+            date: Yup.date()
+                .nullable()
+                .min(
+                    new Date(),
+                    `Date must later than ${new Date().toDateString()}`,
+                )
+                .max(
+                    new Date().getFullYear() + 1,
+                    `Date must before ${new Date().getFullYear() + 1}`,
+                )
                 .required('Required'),
-            lastName: Yup.string()
-                .max(20, 'Must be 20 characters or less')
+            time: Yup.string()
+                .required('Required')
+                .test(
+                    'is-between',
+                    'Time must be between 17:00 and 22:00',
+                    isTimeBetween('17:00', '22:00'),
+                ),
+            adults: Yup.number()
+                .min(1, 'Reservation must be made for at least 1 guest')
+                .max(10, 'Reservation can be made for maximum 10 guests')
                 .required('Required'),
-            email: Yup.string()
-                .email('Invalid email address')
-                .required('Required'),
+            children: Yup.number().max(
+                5,
+                'Reservation can be made for maximum 5 children',
+            ),
         }),
         onSubmit: (values) => {
             alert(JSON.stringify(values, null, 2));
         },
     });
+
     const formikPersonalDetails = useFormik({
         initialValues: {
-            firstName: '',
-            lastName: '',
+            fullName: '',
             email: '',
+            phone: '',
         },
         validationSchema: Yup.object({
-            firstName: Yup.string()
-                .max(15, 'Must be 15 characters or less')
-                .required('Required'),
-            lastName: Yup.string()
-                .max(20, 'Must be 20 characters or less')
+            fullName: Yup.string()
+                .min(3, 'Must be between 3 and 50 characters')
+                .max(50, 'Must be between 3 and 50 characters')
                 .required('Required'),
             email: Yup.string()
                 .email('Invalid email address')
+                .required('Required'),
+            phone: Yup.string()
+                .min(8, 'Must be between 8 and 14 characters')
+                .max(14, 'Must be between 8 and 14 characters')
                 .required('Required'),
         }),
         onSubmit: (values) => {
@@ -59,46 +82,61 @@ const BookingForm = () => {
                     <form onSubmit={formikReservationDetails.handleSubmit}>
                         <Input
                             color="secondary"
-                            label="First Name"
-                            id="firstName"
-                            name="firstName"
-                            type="text"
+                            label="Date"
+                            id="date"
+                            name="date"
+                            type="date"
                             onChange={formikReservationDetails.handleChange}
                             onBlur={formikReservationDetails.handleBlur}
-                            value={formikReservationDetails.values.firstName}
+                            value={formikReservationDetails.values.date}
                             error={
-                                formikReservationDetails.touched.firstName &&
-                                formikReservationDetails.errors.firstName
+                                formikReservationDetails.touched.date &&
+                                formikReservationDetails.errors.date
                             }
                             isRequired={true}
                         />
                         <Input
                             color="secondary"
-                            label="Last Name"
-                            id="lastName"
-                            name="lastName"
-                            type="text"
+                            label="Time"
+                            id="time"
+                            name="time"
+                            type="time"
                             onChange={formikReservationDetails.handleChange}
                             onBlur={formikReservationDetails.handleBlur}
-                            value={formikReservationDetails.values.lastName}
+                            value={formikReservationDetails.values.time}
                             error={
-                                formikReservationDetails.touched.lastName &&
-                                formikReservationDetails.errors.lastName
+                                formikReservationDetails.touched.time &&
+                                formikReservationDetails.errors.time
                             }
                             isRequired={true}
                         />
                         <Input
                             color="secondary"
-                            label="Email Address"
-                            id="email"
-                            name="email"
-                            type="email"
+                            label="Adults"
+                            id="adults"
+                            name="adults"
+                            type="number"
                             onChange={formikReservationDetails.handleChange}
                             onBlur={formikReservationDetails.handleBlur}
-                            value={formikReservationDetails.values.email}
+                            value={formikReservationDetails.values.adults}
                             error={
-                                formikReservationDetails.touched.email &&
-                                formikReservationDetails.errors.email
+                                formikReservationDetails.touched.adults &&
+                                formikReservationDetails.errors.adults
+                            }
+                            isRequired={true}
+                        />
+                        <Input
+                            color="secondary"
+                            label="Children"
+                            id="children"
+                            name="children"
+                            type="number"
+                            onChange={formikReservationDetails.handleChange}
+                            onBlur={formikReservationDetails.handleBlur}
+                            value={formikReservationDetails.values.children}
+                            error={
+                                formikReservationDetails.touched.children &&
+                                formikReservationDetails.errors.children
                             }
                         />
                     </form>
@@ -109,30 +147,18 @@ const BookingForm = () => {
                     <h2>Personal Details</h2>
                     <form onSubmit={formikPersonalDetails.handleSubmit}>
                         <Input
-                            label="First Name"
-                            id="firstName"
-                            name="firstName"
+                            label="Fulle Name"
+                            id="fullName"
+                            name="fullName"
                             type="text"
                             onChange={formikPersonalDetails.handleChange}
                             onBlur={formikPersonalDetails.handleBlur}
-                            value={formikPersonalDetails.values.firstName}
+                            value={formikPersonalDetails.values.fullName}
                             error={
-                                formikPersonalDetails.touched.firstName &&
-                                formikPersonalDetails.errors.firstName
+                                formikPersonalDetails.touched.fullName &&
+                                formikPersonalDetails.errors.fullName
                             }
-                        />
-                        <Input
-                            label="Last Name"
-                            id="lastName"
-                            name="lastName"
-                            type="text"
-                            onChange={formikPersonalDetails.handleChange}
-                            onBlur={formikPersonalDetails.handleBlur}
-                            value={formikPersonalDetails.values.lastName}
-                            error={
-                                formikPersonalDetails.touched.lastName &&
-                                formikPersonalDetails.errors.lastName
-                            }
+                            isRequired={true}
                         />
                         <Input
                             label="Email Address"
@@ -146,6 +172,21 @@ const BookingForm = () => {
                                 formikPersonalDetails.touched.email &&
                                 formikPersonalDetails.errors.email
                             }
+                            isRequired={true}
+                        />
+                        <Input
+                            label="Phone"
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            onChange={formikPersonalDetails.handleChange}
+                            onBlur={formikPersonalDetails.handleBlur}
+                            value={formikPersonalDetails.values.phone}
+                            error={
+                                formikPersonalDetails.touched.phone &&
+                                formikPersonalDetails.errors.phone
+                            }
+                            isRequired={true}
                         />
                     </form>
                 </div>
