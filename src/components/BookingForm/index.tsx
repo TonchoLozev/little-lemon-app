@@ -2,9 +2,11 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import { Input, SectionBackground } from '../../atoms/index.ts';
+import { Input, Select, SectionBackground } from '../../atoms/index.ts';
 
 import { isTimeBetween } from '../../utils/index.ts';
+
+import Constants from '../../constants.ts';
 
 import './index.css';
 
@@ -54,6 +56,7 @@ const BookingForm = () => {
             fullName: '',
             email: '',
             phone: '',
+            occasion: '',
         },
         validationSchema: Yup.object({
             fullName: Yup.string()
@@ -72,6 +75,8 @@ const BookingForm = () => {
             alert(JSON.stringify(values, null, 2));
         },
     });
+
+    console.log(formikPersonalDetails.values);
     return (
         <>
             <section className="booking-section-1 grid-layout">
@@ -187,6 +192,15 @@ const BookingForm = () => {
                                 formikPersonalDetails.errors.phone
                             }
                             isRequired={true}
+                        />
+                        <Select
+                            id="occasion"
+                            name="occasion"
+                            defaultValue="Occasion"
+                            value={formikPersonalDetails.values.occasion}
+                            onChange={formikPersonalDetails.handleChange}
+                            options={Constants.OCCASIONS}
+                            icon="cheers.svg"
                         />
                     </form>
                 </div>

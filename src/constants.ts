@@ -89,6 +89,7 @@ const Constants = {
             description: 'Normal',
         },
     ],
+    OCCASIONS: ['Birthday', 'Engagement', 'Anniversary'],
 };
 
 export default Constants;
