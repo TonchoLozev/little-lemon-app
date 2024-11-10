@@ -1,5 +1,6 @@
 .booking-section-1 {
     position: relative;
+    z-index: 9999;
 }
 
 .booking-section-1 h2,
@@ -22,7 +23,9 @@
 }
 
 .booking-reservation-details form .input,
-.booking-personal-details form .input {
+.booking-reservation-details form .select,
+.booking-personal-details form .input,
+.booking-personal-details form .select {
     flex-basis: 100%;
 }
 
@@ -33,7 +36,9 @@
     }
 
     .booking-reservation-details form .input,
-    .booking-personal-details form .input {
+    .booking-reservation-details form .select,
+    .booking-personal-details form .input,
+    .booking-personal-details form .select {
         flex-basis: calc(50% - 16px);
     }
 }

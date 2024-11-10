@@ -1,22 +1,44 @@
 .select {
     display: flex;
-    flex: 1;
-    align-items: flex-end;
+    flex-direction: column;
     position: relative;
+}
+
+.select label {
+    margin-bottom: 2px;
+}
+
+.select-secondary label {
+    color: white;
+}
+
+.select label .empty-label {
+    height: 21px;
 }
 
 .select-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 1;
-    height: 46px;
     border-radius: 6px;
     padding: 10px 16px;
-    /* background-color: var(--seconary-light-gray); */
-    /* box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); */
     border: 1px solid var(--primary-green);
     cursor: pointer;
+    background-color: white;
+    height: 40px;
+}
+
+.select-input.empty-label {
+    height: 44px;
+}
+
+.select-input--selected {
+    border: 1px solid white;
+    background-color: var(--primary-green);
+}
+
+.select-input--selected h6 {
+    color: white;
 }
 
 .select-options {
@@ -44,6 +66,15 @@
     cursor: pointer;
 }
 
+.select-options li:hover {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.select-options li:hover h3 {
+    color: white;
+}
+
 @media (min-width: 768px) {
     .select-options--opened {
         top: 74px;
@@ -51,7 +82,21 @@
 }
 
 @media (min-width: 1025px) {
+    .select label {
+        margin-bottom: 6px;
+    }
+
+    .select label .empty-label {
+        height: 27px;
+    }
+
     .select-options--opened {
         top: 92px;
+    }
+    .select-input {
+        height: 44px;
+    }
+    .select-input.empty-label {
+        height: 46px;
     }
 }

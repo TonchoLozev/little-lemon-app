@@ -14,7 +14,7 @@ const BookingForm = () => {
     const formikReservationDetails = useFormik({
         initialValues: {
             date: '',
-            time: '',
+            time: '17:00',
             adults: 1,
             children: 0,
         },
@@ -76,7 +76,7 @@ const BookingForm = () => {
         },
     });
 
-    console.log(formikPersonalDetails.values);
+    console.log(formikReservationDetails.values, formikPersonalDetails.values);
     return (
         <>
             <section className="booking-section-1 grid-layout">
@@ -100,7 +100,7 @@ const BookingForm = () => {
                             }
                             isRequired={true}
                         />
-                        <Input
+                        {/* <Input
                             color="secondary"
                             label="Time"
                             id="time"
@@ -113,6 +113,16 @@ const BookingForm = () => {
                                 formikReservationDetails.touched.time &&
                                 formikReservationDetails.errors.time
                             }
+                            isRequired={true}
+                        /> */}
+                        <Select
+                            color="secondary"
+                            label="Time"
+                            id="time"
+                            name="time"
+                            value={formikReservationDetails.values.time}
+                            onChange={formikReservationDetails.handleChange}
+                            options={Constants.TIME}
                             isRequired={true}
                         />
                         <Input
