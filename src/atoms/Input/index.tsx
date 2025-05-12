@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { ChangeEvent, useMemo } from 'react';
 
 import './index.css';
 
@@ -9,10 +9,11 @@ type InputProps = {
     type: string;
     label: string;
     value: string | number;
-    onChange: any;
-    onBlur: any;
+    onChange: (e: ChangeEvent) => void;
+    onBlur: (e: ChangeEvent) => void;
     error: string | false | undefined;
     isRequired?: boolean;
+    testID?: string;
 };
 
 const Input = ({
@@ -26,6 +27,7 @@ const Input = ({
     onBlur,
     error,
     isRequired,
+    testID = 'input',
 }: InputProps) => {
     const colorClass = useMemo(() => {
         if (color === 'primary') {
@@ -37,7 +39,11 @@ const Input = ({
     }, [color]);
 
     return (
-        <div className={`input ${colorClass}`} role="input-field">
+        <div
+            className={`input ${colorClass}`}
+            role="input-field"
+            data-testid={testID}
+        >
             <label htmlFor={id}>
                 <h3>
                     {label} {isRequired && <span className="text-red">*</span>}

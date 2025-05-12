@@ -13,7 +13,7 @@ type SelectProps = {
     defaultValue?: string;
     value: string;
     options: string[];
-    onChange: any;
+    onChange: (e: { target: { id: string; name: string; value: any } }) => void;
     icon?: string;
     isRequired?: boolean;
 };

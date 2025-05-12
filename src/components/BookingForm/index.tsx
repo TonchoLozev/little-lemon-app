@@ -100,21 +100,6 @@ const BookingForm = () => {
                             }
                             isRequired={true}
                         />
-                        {/* <Input
-                            color="secondary"
-                            label="Time"
-                            id="time"
-                            name="time"
-                            type="time"
-                            onChange={formikReservationDetails.handleChange}
-                            onBlur={formikReservationDetails.handleBlur}
-                            value={formikReservationDetails.values.time}
-                            error={
-                                formikReservationDetails.touched.time &&
-                                formikReservationDetails.errors.time
-                            }
-                            isRequired={true}
-                        /> */}
                         <Select
                             color="secondary"
                             label="Time"
@@ -162,7 +147,7 @@ const BookingForm = () => {
                     <h2>Personal Details</h2>
                     <form onSubmit={formikPersonalDetails.handleSubmit}>
                         <Input
-                            label="Fulle Name"
+                            label="Full Name"
                             id="fullName"
                             name="fullName"
                             type="text"
