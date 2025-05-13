@@ -27,7 +27,6 @@ const Input = ({
     onBlur,
     error,
     isRequired,
-    testID = 'input',
 }: InputProps) => {
     const colorClass = useMemo(() => {
         if (color === 'primary') {
@@ -42,7 +41,7 @@ const Input = ({
         <div
             className={`input ${colorClass}`}
             role="input-field"
-            data-testid={testID}
+            data-testid={id}
         >
             <label htmlFor={id}>
                 <h3>

@@ -68,6 +68,7 @@ const Select = ({
                 className={`select-input ${isSelected ? 'select-input--selected' : ''} ${!label ? 'empty-label' : ''}`}
                 onClick={handleSelectClick}
                 id={id}
+                data-testid={id}
             >
                 {icon && !isSelected ? (
                     <img
