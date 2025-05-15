@@ -66,9 +66,17 @@
     cursor: pointer;
 }
 
+.select-options li.disabled{
+    background-color: var(--seconary-light-gray);
+}
+
 .select-options li:hover {
     background-color: var(--primary-green);
     color: white;
+}
+.select-options li.disabled:hover {
+    background-color: var(--seconary-gray);
+    color: var(--seconary-light-gray);
 }
 
 .select-options li:hover h3 {

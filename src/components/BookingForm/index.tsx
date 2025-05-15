@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
@@ -8,12 +8,20 @@ import { isTimeBetween } from '../../utils/index.ts';
 
 import Constants from '../../constants.ts';
 
+import { fetchAPI } from '../../api';
+
 import './index.css';
 
 const BookingForm = () => {
+    const [availableTime, setAvailableTime] = useState<string[]>(
+        Constants.TIME,
+    );
+
     const formikReservationDetails = useFormik({
         initialValues: {
-            date: '',
+            //NOTE
+            //This is the date for tomorrow
+            date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
             time: '17:00',
             adults: 1,
             children: 0,
@@ -76,7 +84,24 @@ const BookingForm = () => {
         },
     });
 
-    console.log(formikReservationDetails.values, formikPersonalDetails.values);
+    useEffect(() => {
+        const getAvailableTime = fetchAPI(
+            new Date(formikReservationDetails.values.date),
+        );
+        const firstAvailableTime = getAvailableTime.find((time) =>
+            time.endsWith('00'),
+        );
+
+        setAvailableTime(getAvailableTime);
+
+        formikReservationDetails.setFieldValue('time', firstAvailableTime);
+    }, [formikReservationDetails.values.date]);
+
+    console.log(
+        formikReservationDetails.values,
+        formikPersonalDetails.values,
+        availableTime,
+    );
     return (
         <>
             <section className="booking-section-1 grid-layout">
@@ -108,6 +133,7 @@ const BookingForm = () => {
                             value={formikReservationDetails.values.time}
                             onChange={formikReservationDetails.handleChange}
                             options={Constants.TIME}
+                            availableOptions={availableTime}
                             isRequired={true}
                         />
                         <Input

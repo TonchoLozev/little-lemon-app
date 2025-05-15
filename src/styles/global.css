@@ -14,6 +14,10 @@
     color: var(--seconary-orange);
 }
 
+.text-gray {
+    color: var(--seconary-gray);
+}
+
 .text-light-gray {
     color: var(--seconary-light-gray);
 }
@@ -32,6 +36,10 @@
 
 .background-yellow {
     background-color: var(--primary-yellow);
+}
+
+.background-gray {
+    background-color: var(--seconary-gray);
 }
 
 .background-light-gray {

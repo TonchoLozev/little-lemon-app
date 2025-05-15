@@ -13,6 +13,7 @@ type SelectProps = {
     defaultValue?: string;
     value: string;
     options: string[];
+    availableOptions?: string[];
     onChange: (e: { target: { id: string; name: string; value: any } }) => void;
     icon?: string;
     isRequired?: boolean;
@@ -26,6 +27,7 @@ const Select = ({
     defaultValue,
     value,
     options,
+    availableOptions,
     onChange,
     icon,
     isRequired,
@@ -93,9 +95,35 @@ const Select = ({
                 className={`select-options ${isOpened ? 'select-options--opened' : ''}`}
             >
                 {options.map((option) => (
-                    <li key={option} onClick={handleOptionClick(option)}>
+                    <li
+                        className={
+                            availableOptions
+                                ? availableOptions.includes(option)
+                                    ? ''
+                                    : 'disabled'
+                                : ''
+                        }
+                        key={option}
+                        onClick={
+                            availableOptions
+                                ? availableOptions.includes(option)
+                                    ? handleOptionClick(option)
+                                    : undefined
+                                : handleOptionClick(option)
+                        }
+                    >
                         {' '}
-                        <h3 className="text-green">{option}</h3>
+                        <h3
+                            className={
+                                availableOptions
+                                    ? availableOptions.includes(option)
+                                        ? 'text-green'
+                                        : 'text-gray'
+                                    : 'text-green'
+                            }
+                        >
+                            {option}
+                        </h3>
                     </li>
                 ))}
             </ul>

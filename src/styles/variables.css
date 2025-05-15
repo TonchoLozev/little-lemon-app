@@ -4,6 +4,7 @@
     --primary-yellow: #f4ce14;
     --primary-red: #ff3838;
     --seconary-orange: #ee9972;
+    --seconary-gray: #333333;
     --seconary-light-gray: #edefee;
 
     --grid: repeat(4, [col-start] 1fr);
