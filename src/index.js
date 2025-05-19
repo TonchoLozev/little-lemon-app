@@ -8,6 +8,7 @@ import HomeRoute from './components/HomePage/index.tsx';
 import AboutRoute from './components/AboutPage/index.tsx';
 import MenuRoute from './components/MenuPage/index.tsx';
 import BookingPage from './components/BookingPage/index.tsx';
+import ConfirmedBookingPage from './components/ConfirmedBookingPage/index.tsx';
 
 import './index.css';
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
     {
         path: '/booking',
         element: <BookingPage />,
+    },
+    {
+        path: '/confirmed-booking',
+        element: <ConfirmedBookingPage />,
     },
 ]);
 

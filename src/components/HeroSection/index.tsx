@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, SectionBackground } from '../../atoms/index.ts';
 
@@ -7,8 +8,10 @@ import RestauranfoodImf from '../../assets/other/restauranfood.jpg';
 import './index.css';
 
 const HeroSection = () => {
+    const navigate = useNavigate();
+
     const handleReserve = () => {
-        return true;
+        navigate('/booking');
     };
     return (
         <section className="hero-section grid-layout">

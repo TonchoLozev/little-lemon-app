@@ -1,0 +1,29 @@
+.confirmed-booking-section {
+    position: relative;
+}
+
+.confirmed-booking-section-description {
+    grid-column: col-start 1 / span 4;
+    text-align: center;
+}
+
+.confirmed-booking-section-images {
+    grid-column: col-start 1 / span 4;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (min-width: 1025px) {
+    .confirmed-booking-section-description {
+        grid-column: col-start 2 / span 6;
+        text-align: left;
+    }
+
+    .confirmed-booking-section-images {
+        grid-column: col-start 10 / span 10;
+        justify-content: flex-start;
+    }
+}

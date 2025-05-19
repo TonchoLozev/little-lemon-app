@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { CardSpecial } from '../../molecules/index.ts';
 
@@ -9,9 +10,12 @@ import Constants from '../../constants.ts';
 import './index.css';
 
 const Specials = () => {
+    const navigate = useNavigate();
+
     const handleOnlineMenu = () => {
-        return true;
+        navigate('/menu');
     };
+
     return (
         <section id="specials" className="specials-section grid-layout">
             <div className="specials-title">

@@ -26,6 +26,7 @@ export const fetchAPI = (date: Date): string[] => {
     return result;
 };
 
-export const submitAPI = (): boolean => {
+export const submitAPI = (formData: FormData): boolean => {
+    console.log('Form submitted:', formData);
     return true;
 };

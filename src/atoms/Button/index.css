@@ -12,3 +12,8 @@
     color: var(--primary-green);
     background-color: var(--primary-yellow);
 }
+
+.btn.btn-primary.disabled {
+    opacity: 0.5;
+    cursor: default;
+}

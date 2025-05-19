@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 
-import { Input, Select, SectionBackground } from '../../atoms/index.ts';
+import { Input, Select, SectionBackground, Button } from '../../atoms/index.ts';
 
 import { isTimeBetween } from '../../utils/index.ts';
 
 import Constants from '../../constants.ts';
 
-import { fetchAPI } from '../../api';
+import { fetchAPI, submitAPI } from '../../api';
 
 import './index.css';
 
 const BookingForm = () => {
+    const navigate = useNavigate();
+
     const [availableTime, setAvailableTime] = useState<string[]>(
         Constants.TIME,
     );
@@ -97,11 +100,25 @@ const BookingForm = () => {
         formikReservationDetails.setFieldValue('time', firstAvailableTime);
     }, [formikReservationDetails.values.date]);
 
-    console.log(
-        formikReservationDetails.values,
-        formikPersonalDetails.values,
-        availableTime,
-    );
+    const submitForm = () => {
+        const formData = new FormData();
+        Object.entries(formikReservationDetails.values).forEach(
+            ([key, value]) => {
+                formData.append(key, String(value));
+            },
+        );
+        Object.entries(formikPersonalDetails.values).forEach(([key, value]) => {
+            formData.append(key, String(value));
+        });
+
+        const formSubmitted = submitAPI(formData);
+        if (formSubmitted) {
+            navigate('/confirmed-booking', { state: { formData } });
+        } else {
+            navigate('/');
+        }
+    };
+
     return (
         <>
             <section className="booking-section-1 grid-layout">
@@ -109,7 +126,7 @@ const BookingForm = () => {
                 <div className="booking-reservation-details">
                     <h1 className="text-yellow">Reserve</h1>
                     <h2 className="text-white">Reservation Details</h2>
-                    <form onSubmit={formikReservationDetails.handleSubmit}>
+                    <form>
                         <Input
                             color="secondary"
                             label="Date"
@@ -171,7 +188,7 @@ const BookingForm = () => {
             <section className="booking-section-2 grid-layout">
                 <div className="booking-personal-details">
                     <h2>Personal Details</h2>
-                    <form onSubmit={formikPersonalDetails.handleSubmit}>
+                    <form>
                         <Input
                             label="Full Name"
                             id="fullName"
@@ -225,6 +242,18 @@ const BookingForm = () => {
                         />
                     </form>
                 </div>
+            </section>
+            <section className="booking-section-3">
+                <Button
+                    onClick={submitForm}
+                    isDisabled={Boolean(
+                        !formikPersonalDetails.dirty ||
+                            !formikReservationDetails.isValid ||
+                            !formikPersonalDetails.isValid,
+                    )}
+                >
+                    Confirm Booking
+                </Button>
             </section>
         </>
     );

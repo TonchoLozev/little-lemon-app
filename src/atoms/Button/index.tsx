@@ -6,9 +6,15 @@ type ButtonProps = {
     color?: 'primary' | 'secondary';
     onClick: () => void;
     children: string;
+    isDisabled?: boolean;
 };
 
-const Button = ({ color = 'primary', onClick, children }: ButtonProps) => {
+const Button = ({
+    color = 'primary',
+    onClick,
+    children,
+    isDisabled,
+}: ButtonProps) => {
     const colorlass = useMemo(() => {
         if (color === 'primary') {
             return 'btn-primary';
@@ -25,7 +31,10 @@ const Button = ({ color = 'primary', onClick, children }: ButtonProps) => {
         onClick();
     };
     return (
-        <button className={`btn ${colorlass}`} onClick={handleOnClick}>
+        <button
+            className={`btn ${colorlass}${isDisabled ? ' disabled' : ''}`}
+            onClick={isDisabled ? undefined : handleOnClick}
+        >
             <h6>{children}</h6>
         </button>
     );
