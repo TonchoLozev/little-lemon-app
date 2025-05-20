@@ -42,6 +42,7 @@ const Input = ({
             className={`input ${colorClass}`}
             role="input-field"
             data-testid={id}
+            aria-label="On Input"
         >
             <label htmlFor={id}>
                 <h3>

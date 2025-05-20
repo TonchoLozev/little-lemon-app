@@ -60,7 +60,11 @@ const Select = ({
     };
 
     return (
-        <div className={`select ${colorClass}`} role="select">
+        <div
+            className={`select ${colorClass}`}
+            role="select"
+            aria-label="On Click"
+        >
             <label htmlFor={id}>
                 <h3 className={!label ? 'empty-label' : ''}>
                     {label} {isRequired && <span className="text-red">*</span>}
@@ -93,6 +97,7 @@ const Select = ({
             </div>
             <ul
                 className={`select-options ${isOpened ? 'select-options--opened' : ''}`}
+                role="dropdown"
             >
                 {options.map((option) => (
                     <li

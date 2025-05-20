@@ -34,6 +34,7 @@ const Button = ({
         <button
             className={`btn ${colorlass}${isDisabled ? ' disabled' : ''}`}
             onClick={isDisabled ? undefined : handleOnClick}
+            aria-label="On Click"
         >
             <h6>{children}</h6>
         </button>
