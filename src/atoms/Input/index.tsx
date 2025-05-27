@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useMemo } from 'react';
+import React, { ChangeEvent, useMemo, useState } from 'react';
 
 import './index.css';
 
@@ -28,6 +28,7 @@ const Input = ({
     error,
     isRequired,
 }: InputProps) => {
+    const [isFocused, setIsFocused] = useState<boolean>(false);
     const colorClass = useMemo(() => {
         if (color === 'primary') {
             return 'input-primary';
@@ -56,6 +57,9 @@ const Input = ({
                 onChange={onChange}
                 onBlur={onBlur}
                 value={value}
+                className={`${error ? 'error' : ''} ${isFocused ? 'focused' : ''}`}
+                onFocus={() => setIsFocused(true)}
+                onBlurCapture={() => setIsFocused(false)}
             />
             {error && <span className="text-red">{error}</span>}
         </div>

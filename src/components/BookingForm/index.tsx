@@ -118,6 +118,16 @@ const BookingForm = () => {
             navigate('/');
         }
     };
+    const confirmBooking = () => {
+        if (confirm('Are you sure you want to continue?')) {
+            submitForm();
+        }
+    };
+
+    const resetForm = () => {
+        formikReservationDetails.resetForm();
+        formikPersonalDetails.resetForm();
+    };
 
     return (
         <>
@@ -245,7 +255,7 @@ const BookingForm = () => {
             </section>
             <section className="booking-section-3">
                 <Button
-                    onClick={submitForm}
+                    onClick={confirmBooking}
                     isDisabled={Boolean(
                         !formikPersonalDetails.dirty ||
                             !formikReservationDetails.isValid ||
@@ -253,6 +263,17 @@ const BookingForm = () => {
                     )}
                 >
                     Confirm Booking
+                </Button>
+                <div className="empty" />
+                <Button
+                    color="secondary"
+                    onClick={resetForm}
+                    isDisabled={Boolean(
+                        !formikReservationDetails.dirty &&
+                            !formikPersonalDetails.dirty,
+                    )}
+                >
+                    Reset Form
                 </Button>
             </section>
         </>

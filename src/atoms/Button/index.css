@@ -13,7 +13,7 @@
     background-color: var(--primary-yellow);
 }
 
-.btn.btn-primary.disabled {
+.btn.disabled {
     opacity: 0.5;
     cursor: default;
 }

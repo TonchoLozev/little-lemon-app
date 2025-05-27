@@ -29,6 +29,14 @@
     color: white;
 }
 
+.input input.focused{
+    border: 1px solid var(--primary-yellow);
+}
+
+.input input.error {
+    border: 1px solid var(--primary-red);
+}
+
 @media (min-width: 1025px) {
     .input label {
         margin-bottom: 6px;
