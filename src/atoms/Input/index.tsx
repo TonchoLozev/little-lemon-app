@@ -61,7 +61,11 @@ const Input = ({
                 onFocus={() => setIsFocused(true)}
                 onBlurCapture={() => setIsFocused(false)}
             />
-            {error && <span className="text-red">{error}</span>}
+            {error && (
+                <span className="text-red" aria-label="Error">
+                    {error}
+                </span>
+            )}
         </div>
     );
 };

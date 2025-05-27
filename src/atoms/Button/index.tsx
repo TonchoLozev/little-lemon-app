@@ -7,6 +7,7 @@ type ButtonProps = {
     onClick: () => void;
     children: string;
     isDisabled?: boolean;
+    testID?: string;
 };
 
 const Button = ({
@@ -14,6 +15,7 @@ const Button = ({
     onClick,
     children,
     isDisabled,
+    testID,
 }: ButtonProps) => {
     const colorlass = useMemo(() => {
         if (color === 'primary') {
@@ -35,6 +37,7 @@ const Button = ({
             className={`btn ${colorlass}${isDisabled ? ' disabled' : ''}`}
             onClick={isDisabled ? undefined : handleOnClick}
             aria-label="On Click"
+            data-testid={testID}
         >
             <h6>{children}</h6>
         </button>

@@ -244,6 +244,9 @@ describe('BookingForm', () => {
     });
 
     it('submits form successfully and navigates to confirmation page', async () => {
+        // Mock window.confirm to return false (user clicks Cancel)
+        window.confirm = jest.fn(() => true);
+
         render(<BookingForm />);
 
         // Fill in all required fields
@@ -274,6 +277,9 @@ describe('BookingForm', () => {
     });
 
     it('navigates to home page when submission fails', async () => {
+        // Mock window.confirm to return false (user clicks Cancel)
+        window.confirm = jest.fn(() => true);
+
         (submitAPI as jest.Mock).mockReturnValue(false);
         render(<BookingForm />);
 
@@ -296,6 +302,9 @@ describe('BookingForm', () => {
         fireEvent.click(submitButton);
 
         await waitFor(() => {
+            expect(window.confirm).toHaveBeenCalledWith(
+                'Are you sure you want to continue?',
+            );
             expect(submitAPI).toHaveBeenCalled();
             expect(mockNavigate).toHaveBeenCalledWith('/');
         });
@@ -327,7 +336,7 @@ describe('BookingForm', () => {
 
         render(<BookingForm />);
 
-        const submitButton = screen.getByRole('button');
+        const submitButton = screen.getByTestId('submit-btn');
         expect(submitButton.className).toContain('disabled');
 
         // Fill in only some fields

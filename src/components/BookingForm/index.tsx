@@ -255,6 +255,7 @@ const BookingForm = () => {
             </section>
             <section className="booking-section-3">
                 <Button
+                    testID="submit-btn"
                     onClick={confirmBooking}
                     isDisabled={Boolean(
                         !formikPersonalDetails.dirty ||
