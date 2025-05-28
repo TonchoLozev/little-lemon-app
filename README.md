@@ -1,3 +1,6 @@
+DESIGN: [View the PDF](./Capstone%20design.pdf)  [View the FIG](./Capstone%20design.fig)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
