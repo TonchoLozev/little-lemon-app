@@ -1,6 +1,6 @@
 DESIGN: 
-[View the PDF](./Capstone%20design.pdf)  
-[View the FIG](./Capstone%20design.fig)
+
+[View the PDF](./Capstone%20design.pdf)
 ![View the PNG](./Capstone%20design.png)
 
 
